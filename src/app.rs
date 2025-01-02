@@ -644,10 +644,10 @@ pub fn SuccessCheckout() -> impl IntoView {
 
     view! {
         <p>
-            "Checkout Completed!"
+            "Checkout completed successfully!"
         </p>
         <p>
-            "You will find details of your order in your email soon."
+            "You should find details of your order in your email soon."
         </p>
     }
 }

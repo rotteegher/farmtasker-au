@@ -626,7 +626,7 @@ pub async fn fetch_local_product_info() -> Result<CfgProducts, leptos::ServerFnE
     let products_config_public_file_path = Path::new(&assets_dir).join("products_config.json");
 
     let final_products_config: CfgProducts = if products_config_file_path.exists() {
-        // if file exists then just read it into CfgProducts
+        // if file exists then just read it into CfgProducts from leptos site-root only
         let products_config_file_contents = std::fs::read_to_string(products_config_file_path)?;
         let products_config: CfgProducts = serde_json::from_str(&products_config_file_contents)
             .map_err(|e| std::io::Error::new(std::io::ErrorKind::InvalidData, e))?;
